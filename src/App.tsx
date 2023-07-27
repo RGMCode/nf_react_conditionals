@@ -1,14 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 
+// Conditionals = condition ? JSX : null
+
 function App() {
   const [count, setCount] = useState(0)
 
-    let message = null;
+    // let message = null;
+    // if (count>5){
+    //     message = <p>The count is greater than 5</p>
+    // }
 
-    if (count>5){
-        message = <p>The count is greater than 5</p>
-    }
+    // const message = (count > 5 ) ? <p>The count is greater than 5</p> : null;
 
 
   return (
@@ -17,7 +20,8 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-          {message}
+          {(count > 5 ) ? <p>The count is greater than 5</p> : null} //inline
+          {/*{message}*/}
       </div>
     </>
   )
